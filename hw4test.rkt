@@ -42,18 +42,18 @@
    
    ; cycle-lists test
    (check-equal? (stream-for-n-steps (cycle-lists (list 1 2 3) (list "a" "b")) 3) (list (cons 1 "a") (cons 2 "b") (cons 3 "a")) 
-                 ; "cycle-lists test")
+                 "cycle-lists test")
    
    ; vector-assoc test
-   ; (check-equal? (vector-assoc 4 (vector (cons 2 1) (cons 3 1) (cons 4 1) (cons 5 1))) (cons 4 1) "vector-assoc test")
+   (check-equal? (vector-assoc 4 (vector (cons 2 1) (cons 3 1) (cons 4 1) (cons 5 1))) (cons 4 1) "vector-assoc test")
    
    ; cached-assoc tests
-   ; (check-equal? ((cached-assoc (list (cons 1 2) (cons 3 4)) 3) 3) (cons 3 4) "cached-assoc test")
+   (check-equal? ((cached-assoc (list (cons 1 2) (cons 3 4)) 3) 3) (cons 3 4) "cached-assoc test")
    
    ; while-less test
    ; (check-equal? (while-less 7 do (begin (set! a (+ a 1)) a)) #t "while-less test")
    
-   )))
+   ))
 
 (require rackunit/text-ui)
 ;; runs the test
